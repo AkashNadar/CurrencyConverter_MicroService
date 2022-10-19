@@ -24,9 +24,21 @@ public class ConverterController {
 	public ResponseEntity<Object> currConvert(
 			@RequestParam double curr, 
 			@RequestParam String fromCurr, 
-			@RequestParam String toCurr){
+			@RequestParam String toCurr
+			){
 		System.out.println("in here");
 		double res = this.service.convertCurrByTitle(curr, fromCurr, toCurr);
 		return new ResponseEntity<Object>(res, HttpStatus.OK);
 	}
+	
+	
+//	@GetMapping("/currConvert")
+//	public ResponseEntity<Object> currConvert(
+//			@RequestParam double curr, 
+//			@RequestParam String fromCurr
+//			){
+//
+//		double totalAmount = this.service.getTotalValue(curr, fromCurr);
+//		return new ResponseEntity<Object>(totalAmount, HttpStatus.OK);
+//	}
 }

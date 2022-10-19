@@ -6,4 +6,6 @@ public interface CurrConverterService {
 	
 	public double convertCurrByTitle(double curr, String fromCurr, String toCurr);
 	
+//	public double getTotalValue(double amount, String fromCurr);
+	
 }
